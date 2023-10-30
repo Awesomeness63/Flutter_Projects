@@ -1,6 +1,9 @@
 //import 'dart:ffi';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:myapp/google_signin.dart';
+import 'package:myapp/page-1/attraction-introduction-page.dart';
+import 'package:myapp/page-1/home_page.dart';
+import 'package:myapp/page-1/itinerary-page.dart';
 import 'package:myapp/page-1/start-page-1.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
@@ -19,12 +22,6 @@ Future<void> main() async {
   runApp(MyApp());
 }
 
-// void main() async {
-//   WidgetsFlutterBinding.ensureInitialized();
-//   await Firebase.initializeApp();
-//   runApp(MyApp());
-// }
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -38,11 +35,6 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: startOne(),
-        // home: Scaffold(
-        //   body: SingleChildScrollView(
-        //     child: HomePage(),
-        //   ),
-        // ),
       ),
     );
   }

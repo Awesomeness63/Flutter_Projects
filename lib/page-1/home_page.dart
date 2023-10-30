@@ -46,9 +46,8 @@ class HomePage extends StatelessWidget {
             padding: EdgeInsets.only(left: 8.0, right: 12),
             child: GestureDetector(
               onTap: () {
-                // GoogleSignInProvider googleSignInProvider =
-                //     GoogleSignInProvider();
-                // googleSignInProvider.signOut();
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => Profile()));
               },
               child: CustomIconButton(
                 icon: Icon(Ionicons.person_outline),
@@ -132,7 +131,7 @@ class HomePage extends StatelessWidget {
             } else if (index == 3) {
               // Profile was tapped
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => friends()));
+                  context, MaterialPageRoute(builder: (context) => Friends()));
             }
           }),
     );
